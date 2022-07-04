@@ -1,0 +1,55 @@
+Spring Initializr is a web-based tool provided by the Pivotal Web Service.
+ -With the help of Spring Initializr, we can easily generate the structure of the Spring Boot Project. 
+ -It offers extensible API for creating JVM-based projects.
+
+It also provides various options for the project that are expressed in a metadata model.
+-The metadata model allows us to configure the list of dependencies supported by JVM and platform versions, etc. 
+-It serves its metadata in a well-known that provides necessary assistance to third-party clients.
+
+Spring Initializr Modules.
+
+Spring Initializr has the following module:
+
+initializr-actuator: It provides additional information and statistics on project generation. It is an optional module.
+
+initializr-bom: In this module, BOM stands for Bill Of Materials. In Spring Boot, BOM is a special kind of POM that is used to control the versions of a project's dependencies. It provides a central place to define and update those versions. It provides flexibility to add a dependency in our module without worrying about the versions.
+
+Outside the software world, the BOM is a list of parts, items, assemblies, and other materials required to create products. It explains what, how, and where to collect required materials.
+
+initializr-docs: It provides documentation.
+
+initializr-generator: It is a core project generation library.
+
+initializr-generator-spring:
+
+initializr-generator-test: It provides a test infrastructure for project generation.
+
+initializr-metadata: It provides metadata infrastructure for various aspects of the projects.
+
+initializr-service-example: It provides custom instances.
+
+initializr-version-resolver: It is an optional module to extract version numbers from an arbitrary POM.
+
+initializr-web: It provides web endpoints for third party clients.
+
+
+
+Generating a Project
+
+Before creating a project, we must be friendly with UI.
+ -Spring Initializr UI has the following labels:
+
+Project: It defines the kind of project. 
+-We can create either Maven Project or Gradle Project. 
+-We will create a Maven Project throughout the tutorial.
+
+Language: Spring Initializr provides the choice among three languages Java, Kotlin, and Groovy. 
+-Java is by default selected.
+
+Spring Boot: We can select the Spring Boot version. The latest version is 2.2.2.
+
+Project Metadata: It contains information related to the project, such as Group, Artifact, etc. 
+-Group denotes the package name; Artifact denotes the Application name. 
+-The default Group name is com.example, and the default Artifact name is demo.
+
+Dependencies: Dependencies are the collection of artifacts that we can add to our project.
