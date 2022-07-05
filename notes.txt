@@ -1,0 +1,35 @@
+IoC Container
+The IoC container is responsible to instantiate, configure and assemble the objects. 
+The IoC container gets informations from the XML file and works accordingly.The main
+ tasks performed by IoC container are:
+to instantiate the application class
+to configure the object
+to assemble the dependencies between the objects
+There are two types of IoC containers. They are:
+
+
+Difference between BeanFactory and the ApplicationContext
+The org.springframework.beans.factory.BeanFactory and the org.springframework.context.ApplicationContext
+ interfaces acts as the IoC container. The ApplicationContext interface is built on top of
+  the BeanFactory interface. It adds some extra functionality than BeanFactory such as 
+  simple integration with Spring's AOP, message resource handling (for I18N), event 
+  propagation, application layer specific context (e.g. WebApplicationContext) for web 
+  application. So it is better to use ApplicationContext than BeanFactory.
+
+
+AOP-Aspect-Oriented Programming (AOP) complements Object-Oriented Programming (OOP) by providing another way of thinking about program structure.
+Key unit of modularity in OOP is the class. Key unit of modularity in AOP is the aspect.
+Aspects enable the modularization of concerns that cut across multiple types and objects 
+
+
+AOP is used in the Spring Framework to provide declarative enterprise services,
+especially as a replacement for EJB declarative services (such as transaction management) and allow users to implement custom aspects
+complementing their use of OOP with AOP.
+Aspect: a modularization of a concern that cuts across multiple classes.
+Join point: a point during the execution of a program, such as the execution of a method or the handling of an exception. In Spring AOP, a join point always represents a method execution.
+Advice: action taken by an aspect at a particular join point.
+Pointcut: a predicate that matches join points. Advice is associated with a pointcut expression and runs at any join point matched by the pointcut.
+Introduction: declaring additional methods or fields on behalf of a type. Spring AOP allows you to introduce new interfaces (and its implementation)
+Target object: object being advised by one or more aspects.
+AOP proxy: an object created by the AOP framework in order to implement the aspect contracts.
+Weaving: linking aspects with other application types or objects to create an advised object.
